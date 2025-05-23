@@ -7,14 +7,28 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --ext .js,.ts,.vue --ignore-path .eslintignore .",
+    "lint:fix": "eslint --ext .js,.ts,.vue --ignore-path .eslintignore . --fix",
+    "lint:watch": "onchange \"**/*.{js,ts,vue}\" -- npm run lint:fix"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "@nuxt/image": "^1.10.0",
     "nuxt": "^3.17.4",
     "sass": "^1.89.0",
     "vue": "^3.5.14",
     "vue-router": "^4.5.1",
     "vuetify": "^3.8.6"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "eslint": "^8.57.1",
+    "eslint-plugin-vue": "^10.1.0",
+    "onchange": "^7.1.0",
+    "typescript": "^5.8.3"
   }
 }

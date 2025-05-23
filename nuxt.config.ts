@@ -2,6 +2,26 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
+  modules: [
+    '@nuxt/image',
+    '@nuxtjs/eslint-module'
+  ],
+  eslint: {
+    lintOnStart: false, // Optional: disable linting on start
+  },
+  image: {
+    // Options for @nuxt/image
+    quality: 80,
+    format: ['webp', 'avif', 'jpg', 'png', 'svg'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+  },
   runtimeConfig: {
     public: {
       wordpressUrl: 'http://rest-api-backend.local/wp-json/wp/v2',
