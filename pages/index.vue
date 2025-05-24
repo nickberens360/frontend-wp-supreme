@@ -44,6 +44,12 @@ interface PageBannerButton {
   target?: string;
 }
 
+interface CtaButton {
+  title: string;
+  url: string;
+  target: string;
+}
+
 interface PageBanner {
   bannerLabel?: string;
   bannerHeading?: string;
@@ -76,7 +82,7 @@ interface WordPressResponse {
   };
 }
 
-const transformButton = (button?: PageBannerButton): PageBannerButton => ({
+const transformButton = (button?: PageBannerButton): CtaButton => ({
   title: button?.title ?? '',
   url: button?.url ?? '#',
   target: button?.target ?? '_self'
@@ -121,7 +127,6 @@ const { data, pending, error } = useFetch(() => `${config.public.wordpressUrl}/p
   query: {
     slug: 'sample-page',
   },
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   transform
 });
 </script>
