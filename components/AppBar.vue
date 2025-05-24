@@ -52,7 +52,7 @@
         <v-spacer></v-spacer>
         <v-btn
           variant="flat"
-          color="red"
+          color="primary"
           text-color="white"
           to="/contact">Contact</v-btn>
       </div>

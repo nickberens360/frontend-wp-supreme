@@ -1,15 +1,19 @@
 <template>
   <div>
-    <PageBanner 
+    <PageBanner
       v-if="data?.pageBanner"
       :backgroundImage="data.pageBanner.backgroundImage"
+      :bannerLabel="data.pageBanner.bannerLabel"
       :bannerHeading="data.pageBanner.bannerHeading"
       :bannerContent="data.pageBanner.bannerContent"
-      :ctaButtonOne="data.pageBanner.ctaButtonOne"
-      :ctaButtonTwo="data.pageBanner.ctaButtonTwo"
+      :ctaButtonOne="transformButton(data.pageBanner.ctaButtonOne)"
+      :ctaButtonTwo="transformButton(data.pageBanner.ctaButtonTwo)"
       gradient="to bottom right, #152a5a, #09183d, #041c2e, #09324c, #4a7022"
-      height="600"
+      height="758"
     />
+
+    <PetalCallOut />
+
     <v-container
       fluid
       class="pa-0"

@@ -17,6 +17,9 @@
           cols="7"
           class="text-white"
         >
+          <p
+            v-if="bannerLabel"
+            class="mb-8 text-uppercase">{{bannerLabel}}</p>
           <h1
             class="text-h2 font-weight-bold mb-4"
             v-if="bannerHeading"
@@ -39,6 +42,7 @@
             <v-btn
               v-if="ctaButtonTwo?.title"
               variant="outlined"
+              size="large"
               color="white"
               class="mb-2"
               :href="ctaButtonTwo.url"
@@ -85,7 +89,7 @@ withDefaults(defineProps<{
 }>(), {
   bannerLabel: '',
   backgroundImage: '',
-  height: 500,
+  height: 758,
   contentWidth: 8,
   gradient: 'to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)',
   ctaButtonOne: () => ({

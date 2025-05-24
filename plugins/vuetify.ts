@@ -17,8 +17,21 @@ export default defineNuxtPlugin((nuxtApp) => {
         mdi,
       },
     },
+    defaults: {
+      VBtn: {
+        rounded: 'pill', // This gives a high border radius similar to what you want
+      },
+    },
     theme: {
       defaultTheme: 'light',
+      themes: {
+        light: {
+          colors: {
+            secondary: '#011853',   // Deep blue from the gradient
+            primary: '#bddc03', // Green from the gradient
+          },
+        },
+      },
     },
   })
 
