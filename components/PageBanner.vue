@@ -56,7 +56,7 @@
           <NuxtImg
             v-if="backgroundImage"
             :src="backgroundImage"
-            class="page-banner__img d-none d-md-block"
+            class="page-banner__img"
             width="640"
             max-width="100%"
           ></NuxtImg>
@@ -76,7 +76,7 @@ withDefaults(defineProps<{
   bannerLabel?: string
   bannerHeading?: string
   bannerContent?: string
-  backgroundImage: string
+  backgroundImage?: string
   height?: number | string
   contentWidth?: number | string
   gradient?: string
@@ -84,6 +84,7 @@ withDefaults(defineProps<{
   ctaButtonTwo?: CtaButton
 }>(), {
   bannerLabel: '',
+  backgroundImage: '',
   height: 500,
   contentWidth: 8,
   gradient: 'to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)',

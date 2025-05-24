@@ -38,35 +38,90 @@
 </template>
 
 <script setup lang="ts">
+interface PageBannerButton {
+  title?: string;
+  url?: string;
+  target?: string;
+}
+
+interface PageBanner {
+  bannerLabel?: string;
+  bannerHeading?: string;
+  bannerContent?: string;
+  backgroundImage?: string;
+  ctaButtonOne: PageBannerButton;
+  ctaButtonTwo: PageBannerButton;
+}
+
+interface TransformedResponse {
+  title?: string;
+  content?: string;
+  acf?: string;
+  pageBanner: PageBanner;
+}
+
+interface WordPressResponse {
+  title?: { rendered: string };
+  content?: { rendered: string };
+  acf?: {
+    text_field?: string;
+    page_banner?: {
+      banner_label?: string;
+      banner_heading?: string;
+      banner_content?: string;
+      banner_image?: { url: string };
+      cta_button_one?: PageBannerButton;
+      cta_button_two?: PageBannerButton;
+    };
+  };
+}
+
+const transformButton = (button?: PageBannerButton): PageBannerButton => ({
+  title: button?.title ?? '',
+  url: button?.url ?? '#',
+  target: button?.target ?? '_self'
+});
+
+const transform = (response: WordPressResponse[]): TransformedResponse => {
+  const defaultResponse: TransformedResponse = {
+    title: '',
+    content: '',
+    acf: '',
+    pageBanner: {
+      bannerLabel: '',
+      bannerHeading: '',
+      bannerContent: '',
+      backgroundImage: '',
+      ctaButtonOne: transformButton(),
+      ctaButtonTwo: transformButton()
+    }
+  };
+
+  if (!response?.[0]) return defaultResponse;
+
+  const data = response[0];
+  const pageBanner = data.acf?.page_banner;
+
+  return {
+    title: data.title?.rendered,
+    content: data.content?.rendered,
+    acf: data.acf?.text_field,
+    pageBanner: {
+      bannerLabel: pageBanner?.banner_label,
+      bannerHeading: pageBanner?.banner_heading,
+      bannerContent: pageBanner?.banner_content,
+      backgroundImage: pageBanner?.banner_image?.url,
+      ctaButtonOne: transformButton(pageBanner?.cta_button_one),
+      ctaButtonTwo: transformButton(pageBanner?.cta_button_two)
+    }
+  };
+};
 const config = useRuntimeConfig();
 const { data, pending, error } = useFetch(() => `${config.public.wordpressUrl}/pages`, {
   query: {
     slug: 'sample-page',
   },
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  transform: (response: any[]) => {
-    if (!response || !response[0]) return null;
-    return {
-      title: response[0].title?.rendered,
-      content: response[0].content?.rendered,
-      acf: response[0].acf?.text_field,
-      pageBanner: {
-        bannerLabel: response[0].acf?.page_banner?.banner_label,
-        bannerHeading: response[0].acf?.page_banner?.banner_heading,
-        bannerContent: response[0].acf?.page_banner?.banner_content,
-        backgroundImage: response[0].acf?.page_banner?.banner_image?.url,
-        ctaButtonOne: {
-          title: response[0].acf?.page_banner?.cta_button_one?.title,
-          url: response[0].acf?.page_banner?.cta_button_one?.url,
-          target: response[0].acf?.page_banner?.cta_button_one?.target,
-        },
-        ctaButtonTwo: {
-          title: response[0].acf?.page_banner?.cta_button_two?.title,
-          url: response[0].acf?.page_banner?.cta_button_two?.url,
-          target: response[0].acf?.page_banner?.cta_button_two?.target,
-        }
-      }
-    };
-  }
+  transform
 });
 </script>
