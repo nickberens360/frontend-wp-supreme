@@ -1,22 +1,22 @@
 <template>
-  <div class="petal-callout">
-    <div class="petal-callout__center">
+  <div class="skills-circle">
+    <div class="skills-circle__center">
       NB
     </div>
-    <div class="petal-callout__petal petal-callout__top">
+    <div class="skills-circle__petal skills-circle__top">
       <v-icon
         color="secondary"
         icon="mdi-wordpress"
         size="64"
       ></v-icon>
     </div>
-    <div class="petal-callout__petal petal-callout__right">
+    <div class="skills-circle__petal skills-circle__right">
       Right
     </div>
-    <div class="petal-callout__petal petal-callout__bottom">
+    <div class="skills-circle__petal skills-circle__bottom">
       Bottom
     </div>
-    <div class="petal-callout__petal petal-callout__left">
+    <div class="skills-circle__petal skills-circle__left">
       Left
     </div>
   </div>
@@ -31,7 +31,7 @@
   scoped
   lang="scss"
 >
-.petal-callout {
+.skills-circle {
   position: relative;
   width: 560px;
   height: 560px;

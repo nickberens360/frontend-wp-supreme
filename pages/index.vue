@@ -12,7 +12,7 @@
       height="758"
     />
 
-    <PetalCallOut />
+    <SkillsCircle />
 
     <v-container
       fluid
