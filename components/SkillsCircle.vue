@@ -6,7 +6,7 @@
     <div class="skills-circle__petal skills-circle__top">
       <v-icon
         color="secondary"
-        icon="mdi-wordpress"
+        icon="mdi-vuejs"
         size="64"
       ></v-icon>
     </div>
