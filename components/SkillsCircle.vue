@@ -1,31 +1,44 @@
 <template>
   <div class="skills-circle">
     <div class="skills-circle__center">
-      NB
+      {{ centerText }}
     </div>
-    <div class="skills-circle__petal skills-circle__top">
-      <v-icon
-        color="secondary"
-        icon="mdi-vuejs"
-        size="64"
-      ></v-icon>
-    </div>
-    <div class="skills-circle__petal skills-circle__right">
-      Right
-    </div>
-    <div class="skills-circle__petal skills-circle__bottom">
-      Bottom
-    </div>
-    <div class="skills-circle__petal skills-circle__left">
-      Left
+    <div 
+      v-for="(petal, index) in petals" 
+      :key="index"
+      class="skills-circle__petal d-flex flex-column justify-center align-center"
+      :class="`skills-circle__${petal.location}`"
+    >
+      <div>
+        <v-icon
+          color="secondary"
+          :icon="petal.icon"
+          size="64"
+        />
+      </div>
+      <div class="skills-circle__title">
+        {{ petal.title }}
+      </div>
     </div>
   </div>
 </template>
-<script
-  setup
-  lang="ts"
->
-
+<script setup lang="ts">
+withDefaults(defineProps<{
+  centerText?: string
+  petals?: Array<{
+    title: string
+    icon: string
+    location: 'top' | 'right' | 'bottom' | 'left'
+  }>
+}>(), {
+  centerText: 'NB',
+  petals: () => [
+    { title: 'Vue.js', icon: 'mdi-vuejs', location: 'top' },
+    { title: 'WordPress', icon: 'mdi-wordpress', location: 'right' },
+    { title: 'Node.js', icon: 'mdi-nodejs', location: 'bottom' },
+    { title: 'TypeScript', icon: 'mdi-language-typescript', location: 'left' }
+  ]
+})
 </script>
 <style
   scoped
@@ -81,6 +94,10 @@
     background: rgb(var(--v-theme-secondary));
     border-radius: 50%;
     color: white;
+  }
+
+  &__title {
+    margin-top: 8px;
   }
 }
 
