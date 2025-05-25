@@ -12,7 +12,15 @@
       height="758"
     />
 
-    <SkillsCircle />
+    <SkillsCircle
+      centerText="NB"
+      :petals="[
+        { title: 'Vue.js', icon: 'mdi-vuejs', location: 'top' },
+        { title: 'WordPress', icon: 'mdi-wordpress', location: 'right' },
+        { title: 'CSS', icon: 'mdi-language-css3', location: 'bottom' },
+        { title: 'TypeScript', icon: 'mdi-language-typescript', location: 'left' }
+      ]"
+    />
 
     <v-container
       fluid
