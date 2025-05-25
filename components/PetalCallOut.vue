@@ -4,7 +4,11 @@
       NB
     </div>
     <div class="petal-callout__petal petal-callout__top">
-      Top
+      <v-icon
+        color="secondary"
+        icon="mdi-wordpress"
+        size="64"
+      ></v-icon>
     </div>
     <div class="petal-callout__petal petal-callout__right">
       Right

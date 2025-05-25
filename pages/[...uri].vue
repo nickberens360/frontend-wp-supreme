@@ -24,7 +24,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const route = useRoute();
 // For single-segment paths like 'sample-page', we can use the first element of the array
 const slug = Array.isArray(route.params.uri) ? route.params.uri[0] : route.params.uri;
