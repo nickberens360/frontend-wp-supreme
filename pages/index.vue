@@ -6,8 +6,8 @@
       :bannerLabel="data.pageBanner.bannerLabel"
       :bannerHeading="data.pageBanner.bannerHeading"
       :bannerContent="data.pageBanner.bannerContent"
-      :ctaButtonOne="transformButton(data.pageBanner.ctaButtonOne)"
-      :ctaButtonTwo="transformButton(data.pageBanner.ctaButtonTwo)"
+      :ctaButtonOne="data.pageBanner.ctaButtonOne"
+      :ctaButtonTwo="data.pageBanner.ctaButtonTwo"
       gradient="to bottom right, #152a5a, #09183d, #041c2e, #09324c, #4a7022"
       height="758"
     />
@@ -41,28 +41,11 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { transformWordPressPageBanner, transformButton } from '~/components/PageBanner/utils';
-import type { WordPressPageBanner } from '~/components/PageBanner/types';
+<script setup>
+import { transformWordPressPageBanner } from '~/components/PageBanner/utils';
 
-interface TransformedResponse {
-  title?: string;
-  content?: string;
-  acf?: string;
-  pageBanner: ReturnType<typeof transformWordPressPageBanner>;
-}
-
-interface WordPressResponse {
-  title?: { rendered: string };
-  content?: { rendered: string };
-  acf?: {ew
-    text_field?: string;
-    page_banner?: WordPressPageBanner;
-  };
-}
-
-const transform = (response: WordPressResponse[]): TransformedResponse => {
-  const defaultResponse: TransformedResponse = {
+const transform = (response) => {
+  const defaultResponse = {
     title: '',
     content: '',
     acf: '',
@@ -84,7 +67,7 @@ const transform = (response: WordPressResponse[]): TransformedResponse => {
 const config = useRuntimeConfig();
 const { data, pending, error } = useFetch(() => `${config.public.wordpressUrl}/pages`, {
   query: {
-    slug: 'sample-page',
+    slug: 'home-page',
   },
   transform
 });
