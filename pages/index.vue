@@ -42,90 +42,45 @@
 </template>
 
 <script setup lang="ts">
-interface PageBannerButton {
-  title?: string;
-  url?: string;
-  target?: string;
-}
-
-interface CtaButton {
-  title: string;
-  url: string;
-  target: string;
-}
-
-interface PageBanner {
-  bannerLabel?: string;
-  bannerHeading?: string;
-  bannerContent?: string;
-  backgroundImage?: string;
-  ctaButtonOne: PageBannerButton;
-  ctaButtonTwo: PageBannerButton;
-}
+import { transformWordPressPageBanner, transformButton } from '~/components/PageBanner/utils';
+import type { WordPressPageBanner } from '~/components/PageBanner/types';
 
 interface TransformedResponse {
   title?: string;
   content?: string;
   acf?: string;
-  pageBanner: PageBanner;
+  pageBanner: ReturnType<typeof transformWordPressPageBanner>;
 }
 
 interface WordPressResponse {
   title?: { rendered: string };
   content?: { rendered: string };
-  acf?: {
+  acf?: {ew
     text_field?: string;
-    page_banner?: {
-      banner_label?: string;
-      banner_heading?: string;
-      banner_content?: string;
-      banner_image?: { url: string };
-      cta_button_one?: PageBannerButton;
-      cta_button_two?: PageBannerButton;
-    };
+    page_banner?: WordPressPageBanner;
   };
 }
-
-const transformButton = (button?: PageBannerButton): CtaButton => ({
-  title: button?.title ?? '',
-  url: button?.url ?? '#',
-  target: button?.target ?? '_self'
-});
 
 const transform = (response: WordPressResponse[]): TransformedResponse => {
   const defaultResponse: TransformedResponse = {
     title: '',
     content: '',
     acf: '',
-    pageBanner: {
-      bannerLabel: '',
-      bannerHeading: '',
-      bannerContent: '',
-      backgroundImage: '',
-      ctaButtonOne: transformButton(),
-      ctaButtonTwo: transformButton()
-    }
+    pageBanner: transformWordPressPageBanner()
   };
 
   if (!response?.[0]) return defaultResponse;
 
   const data = response[0];
-  const pageBanner = data.acf?.page_banner;
 
   return {
     title: data.title?.rendered,
     content: data.content?.rendered,
     acf: data.acf?.text_field,
-    pageBanner: {
-      bannerLabel: pageBanner?.banner_label,
-      bannerHeading: pageBanner?.banner_heading,
-      bannerContent: pageBanner?.banner_content,
-      backgroundImage: pageBanner?.banner_image?.url,
-      ctaButtonOne: transformButton(pageBanner?.cta_button_one),
-      ctaButtonTwo: transformButton(pageBanner?.cta_button_two)
-    }
+    pageBanner: transformWordPressPageBanner(data.acf?.page_banner)
   };
 };
+
 const config = useRuntimeConfig();
 const { data, pending, error } = useFetch(() => `${config.public.wordpressUrl}/pages`, {
   query: {

@@ -76,6 +76,7 @@ interface CtaButton {
   url: string
   target: string
 }
+
 withDefaults(defineProps<{
   bannerLabel?: string
   bannerHeading?: string
