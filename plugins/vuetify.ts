@@ -8,6 +8,10 @@ import 'vuetify/styles'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
+    styles: {
+      configFile: 'src/variables.scss',
+    },
+
     components,
     directives,
     icons: {

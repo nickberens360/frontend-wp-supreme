@@ -12,15 +12,13 @@
       height="758"
     />
 
-    <SkillsCircle
-      centerText="NB"
-      :petals="[
-        { title: 'Vue.js', icon: 'mdi-vuejs', location: 'top' },
-        { title: 'WordPress', icon: 'mdi-wordpress', location: 'right' },
-        { title: 'CSS', icon: 'mdi-language-css3', location: 'bottom' },
-        { title: 'TypeScript', icon: 'mdi-language-typescript', location: 'left' }
-      ]"
+    <TabbedContent
+      v-if="data?.skillsCalloutBlock && data.skillsCalloutBlock.length > 0"
+      :skillCircles="data.skillsCalloutBlock"
     />
+
+
+
 
     <v-container
       fluid
@@ -36,7 +34,7 @@
             v-else-if="error"
             type="error">Error loading page</v-alert>
           <v-card v-else-if="data">
-            <v-card-title v-html="data?.title"></v-card-title>
+            <!--            <v-card-title v-html="data?.title"></v-card-title>-->
             <v-card-text v-html="data?.content"></v-card-text>
             <v-card-text v-html="data?.acf"></v-card-text>
           </v-card>
@@ -50,33 +48,47 @@
 </template>
 
 <script setup>
-import { transformWordPressPageBanner } from '~/components/PageBanner/utils';
-
-const transform = (response) => {
-  const defaultResponse = {
-    title: '',
-    content: '',
-    acf: '',
-    pageBanner: transformWordPressPageBanner()
-  };
-
-  if (!response?.[0]) return defaultResponse;
-
-  const data = response[0];
-
-  return {
-    title: data.title?.rendered,
-    content: data.content?.rendered,
-    acf: data.acf?.text_field,
-    pageBanner: transformWordPressPageBanner(data.acf?.page_banner)
-  };
-};
-
 const config = useRuntimeConfig();
 const { data, pending, error } = useFetch(() => `${config.public.wordpressUrl}/pages`, {
   query: {
     slug: 'home-page',
   },
-  transform
+  transform: (response) => {
+    if (!response?.[0]) return null;
+
+    const page = response[0];
+    const pageBanner = page.acf?.page_banner || {};
+    const skillsCalloutBlock = page.acf?.skills_callout_block?.[0] || {};
+
+    return {
+      title: page.title?.rendered || '',
+      content: page.content?.rendered || '',
+      acf: page.acf?.text_field || '',
+      pageBanner: {
+        bannerLabel: pageBanner.banner_label || '',
+        bannerHeading: pageBanner.banner_heading || '',
+        bannerContent: pageBanner.banner_content || '',
+        backgroundImage: pageBanner.banner_image?.url || pageBanner.background_image || '',
+        ctaButtonOne: {
+          title: pageBanner.cta_button_one?.title || '',
+          url: pageBanner.cta_button_one?.url || '',
+          target: pageBanner.cta_button_one?.target || '_self'
+        },
+        ctaButtonTwo: {
+          title: pageBanner.cta_button_two?.title || '',
+          url: pageBanner.cta_button_two?.url || '',
+          target: pageBanner.cta_button_two?.target || '_self'
+        }
+      },
+      skillsCalloutBlock: Array.isArray(skillsCalloutBlock.skill_circles) 
+        ? skillsCalloutBlock.skill_circles.map(item => ({
+            title: item.skill || '',
+            icon: item.icon || '',
+            location: item.location || 'top',
+            tab_content: item.tab_content || ''
+          }))
+        : [],
+    };
+  }
 });
 </script>

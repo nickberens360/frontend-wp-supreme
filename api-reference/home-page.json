@@ -1,0 +1,199 @@
+// 20250525122501
+// http://rest-api-backend.local/wp-json/wp/v2/pages?slug=home-page
+
+[
+  {
+    "id": 2,
+    "date": "2025-05-21T12:13:51",
+    "date_gmt": "2025-05-21T12:13:51",
+    "guid": {
+      "rendered": "http://rest-api-backend.local/?page_id=2"
+    },
+    "modified": "2025-05-25T17:24:44",
+    "modified_gmt": "2025-05-25T17:24:44",
+    "slug": "home-page",
+    "status": "publish",
+    "type": "page",
+    "link": "http://rest-api-backend.local/home-page/",
+    "title": {
+      "rendered": "Home Page"
+    },
+    "content": {
+      "rendered": "\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p></p>\n</blockquote>\n\n\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p></p>\n</blockquote>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "open",
+    "template": "",
+    "meta": {
+      "_acf_changed": false,
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-2",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "page_banner": {
+        "banner_label": "Grow Smarter With Supreme",
+        "banner_heading": "Your Full-Service Life Science Marketing Agency",
+        "banner_content": "Transform your life science and healthcare marketing with our global team, including 70+ Ph.D. scientist-marketers. Leverage over a decade of proprietary marketing data and insights.",
+        "banner_image": {
+          "ID": 27,
+          "id": 27,
+          "title": "homepage-hero-min@2x",
+          "filename": "homepage-hero-min@2x.webp",
+          "filesize": 288496,
+          "url": "http://rest-api-backend.local/wp-content/uploads/2025/05/homepage-hero-min@2x.webp",
+          "link": "http://rest-api-backend.local/home-page/homepage-hero-min2x/",
+          "alt": "",
+          "author": "1",
+          "description": "",
+          "caption": "",
+          "name": "homepage-hero-min2x",
+          "status": "inherit",
+          "uploaded_to": 2,
+          "date": "2025-05-23 21:01:30",
+          "modified": "2025-05-23 21:01:30",
+          "menu_order": 0,
+          "mime_type": "image/webp",
+          "type": "image",
+          "subtype": "webp",
+          "icon": "http://rest-api-backend.local/wp-includes/images/media/default.png",
+          "width": 1112,
+          "height": 726,
+          "sizes": {
+            "thumbnail": "http://rest-api-backend.local/wp-content/uploads/2025/05/homepage-hero-min@2x-150x150.webp",
+            "thumbnail-width": 150,
+            "thumbnail-height": 150,
+            "medium": "http://rest-api-backend.local/wp-content/uploads/2025/05/homepage-hero-min@2x-300x196.webp",
+            "medium-width": 300,
+            "medium-height": 196,
+            "medium_large": "http://rest-api-backend.local/wp-content/uploads/2025/05/homepage-hero-min@2x-768x501.webp",
+            "medium_large-width": 768,
+            "medium_large-height": 501,
+            "large": "http://rest-api-backend.local/wp-content/uploads/2025/05/homepage-hero-min@2x-1024x669.webp",
+            "large-width": 1024,
+            "large-height": 669,
+            "1536x1536": "http://rest-api-backend.local/wp-content/uploads/2025/05/homepage-hero-min@2x.webp",
+            "1536x1536-width": 1112,
+            "1536x1536-height": 726,
+            "2048x2048": "http://rest-api-backend.local/wp-content/uploads/2025/05/homepage-hero-min@2x.webp",
+            "2048x2048-width": 1112,
+            "2048x2048-height": 726
+          }
+        },
+        "cta_button_one": {
+          "title": "Button One",
+          "url": "#",
+          "target": "_blank"
+        },
+        "cta_button_two": {
+          "title": "Button 2",
+          "url": "#",
+          "target": ""
+        }
+      },
+      "skills_callout_block": [
+        {
+          "acf_fc_layout": "skills_callout_block",
+          "skill_circles": [
+            {
+              "icon": "mdi-wordpress",
+              "skill": "WordPress",
+              "location": "top",
+              "tab_content": "<h2>WordPress</h2>\n<p>I like WordPress</p>\n"
+            },
+            {
+              "icon": "mdi-vuejs",
+              "skill": "Skill",
+              "location": "right",
+              "tab_content": "<h2>Vue JS</h2>\n<p>I like Vue JS</p>\n"
+            },
+            {
+              "icon": "mdi-language-css3",
+              "skill": "CSS",
+              "location": "bottom",
+              "tab_content": "<h2>CSS</h2>\n<p>I like CSS</p>\n"
+            },
+            {
+              "icon": "mdi-robot-dead-outline",
+              "skill": "AI",
+              "location": "left",
+              "tab_content": "<p>AI Coding</p>\n<p>I like AI coding</p>\n"
+            }
+          ]
+        }
+      ]
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/pages/2",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/comments?post=2"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 15,
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/pages/2/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 53,
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/pages/2/revisions/53"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/media?parent=2"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

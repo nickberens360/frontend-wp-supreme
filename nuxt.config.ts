@@ -7,10 +7,9 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module'
   ],
   eslint: {
-    lintOnStart: false, // Optional: disable linting on start
+    lintOnStart: false,
   },
   image: {
-    // Options for @nuxt/image
     quality: 80,
     format: ['webp', 'avif', 'jpg', 'png', 'svg'],
     screens: {
@@ -28,7 +27,11 @@ export default defineNuxtConfig({
       frontendSiteUrl: 'http://localhost:3000'
     },
   },
-  css: ['vuetify/styles', '@mdi/font/css/materialdesignicons.css'],
+  css: [
+      'vuetify/styles',
+      '@/assets/variables.scss',
+      '@mdi/font/css/materialdesignicons.css'
+  ],
   build: {
     transpile: ['vuetify'],
   },
