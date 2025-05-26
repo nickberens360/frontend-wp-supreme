@@ -6,7 +6,7 @@
     class="page-banner"
   >
     <v-container
-      class="fill-height pa-0 mx-auto"
+      class="fill-height mx-auto"
       max-width="1400"
       fluid>
       <v-row
@@ -21,7 +21,7 @@
             v-if="bannerLabel"
             class="mb-8 text-uppercase">{{bannerLabel}}</p>
           <h1
-            class="text-h2 font-weight-bold mb-4"
+            class="text-h2 font-weight-bold"
             v-if="bannerHeading"
           >{{ bannerHeading }}</h1>
           <p
