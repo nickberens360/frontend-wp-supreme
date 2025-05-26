@@ -3,9 +3,43 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   modules: [
+    'vuetify-nuxt-module',
     '@nuxt/image',
     '@nuxtjs/eslint-module'
   ],
+  css: [
+    './assets/css/globals.scss',
+    '@mdi/font/css/materialdesignicons.css'
+  ],
+  vuetify: {
+    moduleOptions: {
+      disableVuetifyStyles: true,
+      // styles: {
+      //   configFile: './assets/css/components.scss'
+      // },
+    },
+    vuetifyOptions: {
+      icons: {
+        defaultSet: 'mdi',
+      },
+      defaults: {
+        VBtn: {
+          rounded: 'pill',
+        },
+      },
+      theme: {
+        defaultTheme: 'light',
+        themes: {
+          light: {
+            colors: {
+              secondary: '#011853',
+              primary: '#bddc03',
+            },
+          },
+        },
+      },
+    },
+  },
   eslint: {
     lintOnStart: false,
   },
@@ -26,14 +60,6 @@ export default defineNuxtConfig({
       wordpressUrl: 'http://rest-api-backend.local/wp-json/wp/v2',
       frontendSiteUrl: 'http://localhost:3000'
     },
-  },
-  css: [
-      '@/assets/styles/settings.scss',
-      'vuetify/styles',
-      '@mdi/font/css/materialdesignicons.css'
-  ],
-  build: {
-    transpile: ['vuetify'],
   },
   vite: {
     define: {

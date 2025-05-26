@@ -35,7 +35,7 @@
           >
             <ClientOnly>
               <div
-                class="text-body-1"
+                class="text-body-6"
                 v-html="circle.tab_content"></div>
             </ClientOnly>
           </v-tabs-window-item>

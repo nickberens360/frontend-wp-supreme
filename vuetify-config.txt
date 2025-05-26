@@ -1,0 +1,29 @@
+  vuetify: {
+    moduleOptions: {
+      disableVuetifyStyles: true,
+      styles: {
+        configFile: '@/assets/css/components.scss'
+      },
+    },
+    vuetifyOptions: {
+      icons: {
+        defaultSet: 'mdi',
+      },
+      defaults: {
+        VBtn: {
+          rounded: 'pill',
+        },
+      },
+      theme: {
+        defaultTheme: 'light',
+        themes: {
+          light: {
+            colors: {
+              secondary: '#011853',
+              primary: '#bddc03',
+            },
+          },
+        },
+      },
+    },
+  },

@@ -1,0 +1,13 @@
+@use "vuetify" with (
+  $font-size-root: 18px,
+  $typography: (
+    "body-1": (
+    "size": 24px,
+    "weight": 400,
+    "line-height": 1.5,
+    "letter-spacing": 0.03125em,
+    "font-family": inherit,
+    "text-transform": none
+    )
+  )
+);
