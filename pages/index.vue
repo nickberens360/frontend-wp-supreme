@@ -15,10 +15,8 @@
     <TabbedContent
       v-if="data?.skillsCalloutBlock && data.skillsCalloutBlock.length > 0"
       :skillCircles="data.skillsCalloutBlock"
+      class="pt-16"
     />
-
-
-
 
     <v-container
       fluid
@@ -34,7 +32,6 @@
             v-else-if="error"
             type="error">Error loading page</v-alert>
           <v-card v-else-if="data">
-            <!--            <v-card-title v-html="data?.title"></v-card-title>-->
             <v-card-text v-html="data?.content"></v-card-text>
             <v-card-text v-html="data?.acf"></v-card-text>
           </v-card>

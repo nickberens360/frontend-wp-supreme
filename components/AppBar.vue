@@ -7,7 +7,7 @@
     class="app-bar position-relative"
   >
     <v-container
-      class="px- mx-auto"
+      class="px-4 mx-auto"
       max-width="1400">
       <div class="d-flex align-center">
         <!-- Logo on the left -->

@@ -14,18 +14,18 @@
         class="h-100"
       >
         <v-col
-          cols="7"
-          class="text-white"
+          cols="8"
+          class="text-white page-banner__content"
         >
           <p
             v-if="bannerLabel"
             class="mb-8 text-uppercase">{{bannerLabel}}</p>
           <h1
-            class="text-h2 font-weight-bold"
+            class="text-h3 font-weight-bold"
             v-if="bannerHeading"
           >{{ bannerHeading }}</h1>
           <p
-            class="text-h6 mb-6"
+            class="text-caption mb-6 page-banner__supporting-text"
             v-if="bannerContent"
           >{{ bannerContent }}</p>
           <div class="d-flex flex-wrap">
@@ -54,7 +54,7 @@
           <slot></slot>
         </v-col>
         <v-col
-          cols="5"
+          cols="4"
           class="h-100 d-flex flex-column justify-end pb-0"
         >
           <NuxtImg
@@ -108,22 +108,15 @@ withDefaults(defineProps<{
 
 <style lang="scss" scoped>
 .page-banner {
+  &__content {
+    z-index: 1;
+  }
+  &__supporting-text {
+    max-width: 500px;
+  }
   &__img {
     position: relative;
-    max-height: 100%;
-    object-fit: contain;
-
-    @media (min-width: 960px) {
-      left: -50px;
-    }
-
-    @media (min-width: 1264px) {
-      left: -100px;
-    }
-
-    @media (min-width: 1904px) {
-      left: -150px;
-    }
+    left: -250px;
   }
 }
 </style>
