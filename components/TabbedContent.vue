@@ -33,11 +33,11 @@
             :key="index"
             :value="index"
           >
-            <ClientOnly>
-              <div
-                class="text-body-6"
-                v-html="circle.tab_content"></div>
-            </ClientOnly>
+            
+            <div
+              class="text-body-6"
+              v-html="circle.tab_content"></div>
+            
           </v-tabs-window-item>
         </v-tabs-window>
       </v-col>
