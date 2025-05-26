@@ -6,7 +6,7 @@
     class="page-banner"
   >
     <v-container
-      class="fill-height mx-auto"
+      class="fill-height py-0 mx-auto"
       max-width="1400"
       fluid>
       <v-row
