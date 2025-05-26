@@ -34,7 +34,9 @@
             :value="index"
           >
             <ClientOnly>
-              <div v-html="circle.tab_content"></div>
+              <div
+                class="text-body-1"
+                v-html="circle.tab_content"></div>
             </ClientOnly>
           </v-tabs-window-item>
         </v-tabs-window>

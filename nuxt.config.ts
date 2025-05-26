@@ -28,8 +28,8 @@ export default defineNuxtConfig({
     },
   },
   css: [
+      '@/assets/styles/settings.scss',
       'vuetify/styles',
-      '@/assets/variables.scss',
       '@mdi/font/css/materialdesignicons.css'
   ],
   build: {

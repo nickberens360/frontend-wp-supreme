@@ -4,14 +4,11 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
 import '@mdi/font/css/materialdesignicons.css'
+import "@/assets/styles/settings.scss"
 import 'vuetify/styles'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
-    styles: {
-      configFile: 'src/variables.scss',
-    },
-
     components,
     directives,
     icons: {
@@ -23,7 +20,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     },
     defaults: {
       VBtn: {
-        rounded: 'pill', // This gives a high border radius similar to what you want
+        rounded: 'pill',
       },
     },
     theme: {
