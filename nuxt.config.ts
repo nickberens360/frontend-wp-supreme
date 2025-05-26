@@ -57,9 +57,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      wordpressUrl: 'https://supremebackdev.wpenginepowered.com/wp-json/wp/v2',
-      // wordpressUrl: 'http://supreme-backend.local/wp-json/wp/v2',
-      frontendSiteUrl: 'http://localhost:3000'
+      wordpressUrl: process.env.WORDPRESS_URL || 'https://supremebackdev.wpenginepowered.com/wp-json/wp/v2',
+      frontendSiteUrl: process.env.FRONTEND_URL || 'http://localhost:3000'
     },
   },
   vite: {
