@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     'vuetify-nuxt-module',
     '@nuxt/image',
     '@nuxtjs/eslint-module',
-    '@pinia/nuxt'
   ],
   fonts: {
     families: [
@@ -27,9 +26,6 @@ export default defineNuxtConfig({
   vuetify: {
     moduleOptions: {
       disableVuetifyStyles: true,
-      // styles: {
-      //   configFile: './assets/css/components.scss'
-      // },
     },
     vuetifyOptions: {
       icons: {
