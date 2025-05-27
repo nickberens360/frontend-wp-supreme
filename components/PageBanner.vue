@@ -18,37 +18,37 @@
           class="text-white page-banner__content"
         >
           <p
-            v-if="bannerLabel"
-            class="mb-8 text-uppercase">{{bannerLabel}}</p>
+            v-if="bannerData.banner_label"
+            class="mb-8 text-uppercase">{{bannerData.banner_label}}</p>
           <h1
             class="text-h3"
-            v-if="bannerHeading"
-          >{{ bannerHeading }}</h1>
+            v-if="bannerData.banner_heading"
+          >{{ bannerData.banner_heading }}</h1>
           <p
             class="text-caption mb-6 page-banner__supporting-text"
-            v-if="bannerContent"
-          >{{ bannerContent }}</p>
+            v-if="bannerData.banner_content"
+          >{{ bannerData.banner_content }}</p>
           <div class="d-flex flex-wrap">
             <v-btn
-              v-if="ctaButtonOne?.title"
+              v-if="bannerData.cta_button_one?.title"
               color="primary"
               size="large"
               class="me-4 mb-2"
-              :href="ctaButtonOne.url"
-              :target="ctaButtonOne.target"
+              :href="bannerData.cta_button_one.url"
+              :target="bannerData.cta_button_one.target"
             >
-              {{ ctaButtonOne.title }}
+              {{ bannerData.cta_button_one.title }}
             </v-btn>
             <v-btn
-              v-if="ctaButtonTwo?.title"
+              v-if="bannerData.cta_button_two?.title"
               variant="outlined"
               size="large"
               color="white"
               class="mb-2"
-              :href="ctaButtonTwo.url"
-              :target="ctaButtonTwo.target"
+              :href="bannerData.cta_button_two.url"
+              :target="bannerData.cta_button_two.target"
             >
-              {{ ctaButtonTwo.title }}
+              {{ bannerData.cta_button_two.title }}
             </v-btn>
           </div>
           <slot></slot>
@@ -58,8 +58,8 @@
           class="h-100 d-flex flex-column justify-end pb-0"
         >
           <NuxtImg
-            v-if="backgroundImage"
-            :src="backgroundImage"
+            v-if="bannerData.banner_image?.url || bannerData.background_image"
+            :src="bannerData.banner_image?.url || bannerData.background_image"
             class="page-banner__img"
             width="640"
             max-width="100%"
@@ -71,38 +71,49 @@
 </template>
 
 <script setup lang="ts">
-interface CtaButton {
-  title: string
-  url: string
-  target: string
-}
 
 withDefaults(defineProps<{
-  bannerLabel?: string
-  bannerHeading?: string
-  bannerContent?: string
-  backgroundImage?: string
+  bannerData?: {
+    banner_label?: string
+    banner_heading?: string
+    banner_content?: string
+    banner_image?: { url: string }
+    background_image?: string
+    cta_button_one?: {
+      title?: string
+      url?: string
+      target?: string
+    }
+    cta_button_two?: {
+      title?: string
+      url?: string
+      target?: string
+    }
+  }
   height?: number | string
   contentWidth?: number | string
   gradient?: string
-  ctaButtonOne?: CtaButton
-  ctaButtonTwo?: CtaButton
 }>(), {
-  bannerLabel: '',
-  backgroundImage: '',
+  bannerData: () => ({
+    banner_label: '',
+    banner_heading: '',
+    banner_content: '',
+    banner_image: { url: '' },
+    background_image: '',
+    cta_button_one: {
+      title: '',
+      url: '',
+      target: '_self'
+    },
+    cta_button_two: {
+      title: '',
+      url: '',
+      target: '_self'
+    }
+  }),
   height: 758,
   contentWidth: 8,
-  gradient: 'to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)',
-  ctaButtonOne: () => ({
-    title: '',
-    url: '',
-    target: '_self'
-  }),
-  ctaButtonTwo: () => ({
-    title: '',
-    url: '',
-    target: '_self'
-  })
+  gradient: 'to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)'
 })
 </script>
 

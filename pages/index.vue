@@ -1,13 +1,8 @@
 <template>
   <div>
     <PageBanner
-      v-if="data?.pageBanner"
-      :backgroundImage="data.pageBanner.backgroundImage"
-      :bannerLabel="data.pageBanner.bannerLabel"
-      :bannerHeading="data.pageBanner.bannerHeading"
-      :bannerContent="data.pageBanner.bannerContent"
-      :ctaButtonOne="data.pageBanner.ctaButtonOne"
-      :ctaButtonTwo="data.pageBanner.ctaButtonTwo"
+      v-if="data?.page?.acf?.page_banner"
+      :bannerData="data.page.acf.page_banner"
       gradient="to bottom right, #152a5a, #09183d, #041c2e, #09324c, #4a7022"
       height="758"
     />
@@ -54,29 +49,13 @@ const { data, pending, error } = useFetch(() => `${config.public.wordpressUrl}/p
     if (!response?.[0]) return null;
 
     const page = response[0];
-    const pageBanner = page.acf?.page_banner || {};
     const skillsCalloutBlock = page.acf?.skills_callout_block?.[0] || {};
 
     return {
       title: page.title?.rendered || '',
       content: page.content?.rendered || '',
       acf: page.acf?.text_field || '',
-      pageBanner: {
-        bannerLabel: pageBanner.banner_label || '',
-        bannerHeading: pageBanner.banner_heading || '',
-        bannerContent: pageBanner.banner_content || '',
-        backgroundImage: pageBanner.banner_image?.url || pageBanner.background_image || '',
-        ctaButtonOne: {
-          title: pageBanner.cta_button_one?.title || '',
-          url: pageBanner.cta_button_one?.url || '',
-          target: pageBanner.cta_button_one?.target || '_self'
-        },
-        ctaButtonTwo: {
-          title: pageBanner.cta_button_two?.title || '',
-          url: pageBanner.cta_button_two?.url || '',
-          target: pageBanner.cta_button_two?.target || '_self'
-        }
-      },
+      page: { acf: { page_banner: page.acf?.page_banner } }, // Pass raw page_banner data
       skillsCalloutBlock: Array.isArray(skillsCalloutBlock.skill_circles) 
         ? skillsCalloutBlock.skill_circles.map(item => ({
             title: item.skill || '',

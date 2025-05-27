@@ -1,16 +1,16 @@
 <template>
   <v-card>
     <NuxtImg
-      src="/images/resource-box-bg.jpg"
+      :src="imageUrl"
       width="668"
       max-width="100%"
       class="resource-box__image" />
     <v-card-title class="resource-box__title">
-      <h2 class="text-h5 font-weight-bold">Resource Title</h2>
+      <h2 class="text-h5 font-weight-bold">{{title}}</h2>
     </v-card-title>
     <v-card-text class="resource-box__text">
       <p>
-        This is a brief description of the resource. It provides an overview of what the resource is about.
+        {{description}}
       </p>
     </v-card-text>
     <v-card-actions class="resource-box__actions">
@@ -28,7 +28,19 @@
 </template>
 
 <script setup lang="ts">
-
+withDefaults(
+  defineProps<{
+    title?: string;
+    description?: string;
+    imageUrl?: string;
+    link?: string;
+  }>(),
+  {
+    title: 'Resource Title',
+    description: 'This is a brief description of the resource.',
+    imageUrl: '/images/resource-box-bg.jpg'
+  }
+);
 </script>
 
 <style
