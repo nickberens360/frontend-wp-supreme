@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     'vuetify-nuxt-module',
     '@nuxt/image',
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@pinia/nuxt'
   ],
   fonts: {
     families: [

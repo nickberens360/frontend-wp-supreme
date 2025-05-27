@@ -13,7 +13,7 @@
         <!-- Logo on the left -->
         <div class="logo">
           <NuxtImg
-            src="/WhiteSupremeGroupLogo.svg"
+            :src="route.path === '/' ? '/WhiteNBLogo.svg' : '/BlackNBLogo.svg'"
             alt="Logo"
             height="57"
             width="180"
@@ -21,10 +21,9 @@
             class="mr-8"
           />
         </div>
-
         <v-btn
           text
-          color="white"
+          :color="route.path === '/' ? 'white' : 'secondary'"
           to="/">Home</v-btn>
         <v-menu
           open-on-hover
@@ -32,7 +31,7 @@
           <template v-slot:activator="{ props }">
             <v-btn
               text
-              color="white"
+              :color="route.path === '/' ? 'white' : 'secondary'"
               v-bind="props">
               About
             </v-btn>
@@ -59,6 +58,10 @@
     </v-container>
   </v-app-bar>
 </template>
+
+<script setup>
+const route = useRoute()
+</script>
 
 <style scoped>
 .app-bar {

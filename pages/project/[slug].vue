@@ -7,8 +7,10 @@
       height="500"
     />
 
-    <v-container class="py-16">
-      <v-row>
+    <v-container
+      max-width="1400"
+      class="py-16 mt-16">
+      <v-row class="align-center">
         <v-col>
           <v-progress-circular
             v-if="pending"
@@ -19,7 +21,7 @@
             type="error">Error loading project</v-alert>
 
           <template v-else-if="project">
-            <h1 class="text-caption  mb-4">{{ project.title.rendered }}</h1>
+            <h1 class="text-caption  mb-4 mt-8">{{ project.title.rendered }}</h1>
             <v-divider class="mb-8" />
 
             <div
