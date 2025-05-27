@@ -25,39 +25,32 @@
             />
           </NuxtLink>
         </div>
-        <v-btn
-          text
-          :color="route.path === '/' ? 'white' : 'secondary'"
-          to="/">Home</v-btn>
+        <v-spacer></v-spacer>
         <v-menu
-          open-on-hover
-        >
+          v-model="showContactMenu"
+          :close-on-content-click="false">
           <template v-slot:activator="{ props }">
             <v-btn
-              text
-              :color="route.path === '/' ? 'white' : 'secondary'"
-              v-bind="props">
-              About
-            </v-btn>
+              v-bind="props"
+              variant="flat"
+              color="primary"
+              text-color="white">Intro Call?</v-btn>
           </template>
-          <v-list>
-            <v-list-item to="/about/team">
-              <v-list-item-title>Our Team</v-list-item-title>
-            </v-list-item>
-            <v-list-item to="/about/mission">
-              <v-list-item-title>Our Mission</v-list-item-title>
-            </v-list-item>
-            <v-list-item to="/about/history">
-              <v-list-item-title>Our History</v-list-item-title>
-            </v-list-item>
-          </v-list>
+          <v-card min-width="300">
+            <v-card-title>Contact Information</v-card-title>
+            <v-card-text>
+              <div class="d-flex flex-column">
+                <span>Email: <a href="mailto:nickberens360@gmail.com">nickberens360@gmail.com</a></span>
+                <span>Phone: <a href="tel:9207072942">920-707-2942</a></span>
+              </div>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn
+                text
+                @click="showContactMenu = false">Close</v-btn>
+            </v-card-actions>
+          </v-card>
         </v-menu>
-        <v-spacer></v-spacer>
-        <v-btn
-          variant="flat"
-          color="primary"
-          text-color="white"
-          to="/contact">Contact</v-btn>
       </div>
     </v-container>
   </v-app-bar>
@@ -65,6 +58,7 @@
 
 <script setup>
 const route = useRoute()
+const showContactMenu = ref(false)
 </script>
 
 <style scoped>
