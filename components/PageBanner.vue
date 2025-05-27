@@ -21,7 +21,7 @@
             v-if="bannerData.banner_label"
             class="mb-8 text-uppercase">{{bannerData.banner_label}}</p>
           <h1
-            class="text-h3"
+            class="text-h1"
             v-if="bannerData.banner_heading"
           >{{ bannerData.banner_heading }}</h1>
           <p

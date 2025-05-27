@@ -2,15 +2,25 @@
   $font-size-root: 18px,
   $typography: (
     "body-1": (
-    "size": 24px,
-    "weight": 400,
-    "line-height": 1.5,
-    "letter-spacing": 0.03125em,
-    "font-family": inherit,
-    "text-transform": none
+      "size": 24px,
+      "weight": 400,
+      "line-height": 1.5,
+      "letter-spacing": 0.03125em,
+      "font-family": inherit,
+      "text-transform": none
+    ),
+    "body-2": (
+      "size": 17px,
+      "weight": 400,
+      "line-height": 1.5,
+      "letter-spacing": 0.03125em,
+      "font-family": inherit,
+      "text-transform": none
     ),
 
-    "h3": (
+
+
+    "h1": (
       "size": 65px,
       "weight": 600,
       "line-height": 1,
@@ -18,6 +28,24 @@
       "font-family": inherit,
       "text-transform": none
     ),
+    "h2": (
+      "size": 48px,
+      "weight": 500,
+      "line-height": 1,
+      "letter-spacing": 0.03125em,
+      "font-family": inherit,
+      "text-transform": none
+    ),
+    "h3": (
+      "size": 32px,
+      "weight": 500,
+      "line-height": 1.25,
+      "letter-spacing": 0.03125em,
+      "font-family": inherit,
+      "text-transform": none
+    ),
+
+
     "caption": (
       "size": 16px,
       "weight": 400,
