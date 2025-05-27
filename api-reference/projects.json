@@ -1,0 +1,415 @@
+// 20250527064716
+// http://rest-api-backend.local/wp-json/wp/v2/projects
+
+[
+  {
+    "id": 77,
+    "date": "2025-05-27T11:32:12",
+    "date_gmt": "2025-05-27T11:32:12",
+    "guid": {
+      "rendered": "http://rest-api-backend.local/?post_type=project&#038;p=77"
+    },
+    "modified": "2025-05-27T11:32:37",
+    "modified_gmt": "2025-05-27T11:32:37",
+    "slug": "resharp",
+    "status": "publish",
+    "type": "project",
+    "link": "http://rest-api-backend.local/project/resharp/",
+    "title": {
+      "rendered": "ReSharp"
+    },
+    "excerpt": {
+      "rendered": "<p>Discover How I Built a Scalable Digital Platform for Revolutionary On-Demand Knife Sharpening Technology</p>\n",
+      "protected": false
+    },
+    "featured_media": 0,
+    "menu_order": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": false
+    },
+    "class_list": [
+      "post-77",
+      "project",
+      "type-project",
+      "status-publish",
+      "hentry"
+    ],
+    "acf": {
+      "intro": "Discover How I Built a Scalable Digital Platform for Revolutionary On-Demand Knife Sharpening Technology",
+      "overview": "<p>Resharp offers revolutionary on-demand knife sharpening through automated machines at hardware stores nationwide. I built their digital platform using Vue.js, Nuxt.js, and Prismic.io CMS on AWS, creating a scalable solution for location discovery and showcasing their patented 90-second sharpening technology.</p>\n",
+      "project_details": [
+        {
+          "image": {
+            "ID": 70,
+            "id": 70,
+            "title": "icon-details",
+            "filename": "icon-details.png",
+            "filesize": 16718,
+            "url": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+            "link": "http://rest-api-backend.local/project/wisnet96/icon-details/",
+            "alt": "",
+            "author": "1",
+            "description": "",
+            "caption": "",
+            "name": "icon-details",
+            "status": "inherit",
+            "uploaded_to": 68,
+            "date": "2025-05-27 10:52:28",
+            "modified": "2025-05-27 10:52:28",
+            "menu_order": 0,
+            "mime_type": "image/png",
+            "type": "image",
+            "subtype": "png",
+            "icon": "http://rest-api-backend.local/wp-includes/images/media/default.png",
+            "width": 130,
+            "height": 130,
+            "sizes": {
+              "thumbnail": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+              "thumbnail-width": 130,
+              "thumbnail-height": 130,
+              "medium": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+              "medium-width": 130,
+              "medium-height": 130,
+              "medium_large": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+              "medium_large-width": 130,
+              "medium_large-height": 130,
+              "large": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+              "large-width": 130,
+              "large-height": 130,
+              "1536x1536": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+              "1536x1536-width": 130,
+              "1536x1536-height": 130,
+              "2048x2048": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+              "2048x2048-width": 130,
+              "2048x2048-height": 130
+            }
+          },
+          "title": "The Challenge",
+          "description": "<p>The Hillman Group needed to launch Resharp, an innovative on-demand knife sharpening service, requiring a scalable website that could handle location-based services, educational content about their patented technology, and dynamic store locator functionality across multiple hardware store locations nationwide.</p>\n"
+        },
+        {
+          "image": {
+            "ID": 71,
+            "id": 71,
+            "title": "icon-strategy",
+            "filename": "icon-strategy.png",
+            "filesize": 23668,
+            "url": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+            "link": "http://rest-api-backend.local/project/wisnet96/icon-strategy/",
+            "alt": "",
+            "author": "1",
+            "description": "",
+            "caption": "",
+            "name": "icon-strategy",
+            "status": "inherit",
+            "uploaded_to": 68,
+            "date": "2025-05-27 10:52:43",
+            "modified": "2025-05-27 10:52:43",
+            "menu_order": 0,
+            "mime_type": "image/png",
+            "type": "image",
+            "subtype": "png",
+            "icon": "http://rest-api-backend.local/wp-includes/images/media/default.png",
+            "width": 130,
+            "height": 130,
+            "sizes": {
+              "thumbnail": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+              "thumbnail-width": 130,
+              "thumbnail-height": 130,
+              "medium": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+              "medium-width": 130,
+              "medium-height": 130,
+              "medium_large": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+              "medium_large-width": 130,
+              "medium_large-height": 130,
+              "large": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+              "large-width": 130,
+              "large-height": 130,
+              "1536x1536": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+              "1536x1536-width": 130,
+              "1536x1536-height": 130,
+              "2048x2048": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+              "2048x2048-width": 130,
+              "2048x2048-height": 130
+            }
+          },
+          "title": "The Strategy",
+          "description": "<p>I built a headless architecture using Prismic.io CMS for flexible content management, Vue.js and Nuxt.js for fast performance and SEO optimization. The project was deployed on AWS for enterprise-level scalability to support rapid expansion across retail locations.</p>\n"
+        }
+      ],
+      "link": {
+        "title": "Visit ReSharp",
+        "url": "https://www.resharp.com/",
+        "target": "_blank"
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/projects/77",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/types/project"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/media?parent=77"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 68,
+    "date": "2025-05-27T10:41:08",
+    "date_gmt": "2025-05-27T10:41:08",
+    "guid": {
+      "rendered": "http://rest-api-backend.local/?post_type=project&#038;p=68"
+    },
+    "modified": "2025-05-27T11:47:14",
+    "modified_gmt": "2025-05-27T11:47:14",
+    "slug": "wisnet96",
+    "status": "publish",
+    "type": "project",
+    "link": "http://rest-api-backend.local/project/wisnet96/",
+    "title": {
+      "rendered": "Wisnet96"
+    },
+    "excerpt": {
+      "rendered": "<p>Discover How I Rebuilt a 1996 Website Using Modern JavaScript Frameworks and Headless CMS Architecture</p>\n",
+      "protected": false
+    },
+    "featured_media": 21,
+    "menu_order": 0,
+    "template": "",
+    "meta": {
+      "_acf_changed": false
+    },
+    "class_list": [
+      "post-68",
+      "project",
+      "type-project",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "acf": {
+      "intro": "Rebuilding a throwback ’96 website with modern web technologies",
+      "overview": "<p>Wisnet celebrated 25 years of web development by recreating their original 1996 website using cutting-edge modern technologies. I leveraged Vue.js, headless WordPress, and Nuxt.js to transform a simple commemorative rebuild into a fully interactive Windows 95 desktop experience, demonstrating how nostalgic design can be enhanced with contemporary frameworks while establishing scalable development practices for future client projects.</p>\n",
+      "project_details": [
+        {
+          "image": {
+            "ID": 70,
+            "id": 70,
+            "title": "icon-details",
+            "filename": "icon-details.png",
+            "filesize": 16718,
+            "url": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+            "link": "http://rest-api-backend.local/project/wisnet96/icon-details/",
+            "alt": "",
+            "author": "1",
+            "description": "",
+            "caption": "",
+            "name": "icon-details",
+            "status": "inherit",
+            "uploaded_to": 68,
+            "date": "2025-05-27 10:52:28",
+            "modified": "2025-05-27 10:52:28",
+            "menu_order": 0,
+            "mime_type": "image/png",
+            "type": "image",
+            "subtype": "png",
+            "icon": "http://rest-api-backend.local/wp-includes/images/media/default.png",
+            "width": 130,
+            "height": 130,
+            "sizes": {
+              "thumbnail": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+              "thumbnail-width": 130,
+              "thumbnail-height": 130,
+              "medium": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+              "medium-width": 130,
+              "medium-height": 130,
+              "medium_large": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+              "medium_large-width": 130,
+              "medium_large-height": 130,
+              "large": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+              "large-width": 130,
+              "large-height": 130,
+              "1536x1536": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+              "1536x1536-width": 130,
+              "1536x1536-height": 130,
+              "2048x2048": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-details.png",
+              "2048x2048-width": 130,
+              "2048x2048-height": 130
+            }
+          },
+          "title": "The Challenge",
+          "description": "<p>Wisnet needed to commemorate their 25th anniversary by rebuilding their original 1996 website while using modern web technologies, ultimately evolving into recreating the nostalgic &#8220;Make a Page&#8221; feature within a fully interactive Windows 95 desktop environment.</p>\n"
+        },
+        {
+          "image": {
+            "ID": 71,
+            "id": 71,
+            "title": "icon-strategy",
+            "filename": "icon-strategy.png",
+            "filesize": 23668,
+            "url": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+            "link": "http://rest-api-backend.local/project/wisnet96/icon-strategy/",
+            "alt": "",
+            "author": "1",
+            "description": "",
+            "caption": "",
+            "name": "icon-strategy",
+            "status": "inherit",
+            "uploaded_to": 68,
+            "date": "2025-05-27 10:52:43",
+            "modified": "2025-05-27 10:52:43",
+            "menu_order": 0,
+            "mime_type": "image/png",
+            "type": "image",
+            "subtype": "png",
+            "icon": "http://rest-api-backend.local/wp-includes/images/media/default.png",
+            "width": 130,
+            "height": 130,
+            "sizes": {
+              "thumbnail": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+              "thumbnail-width": 130,
+              "thumbnail-height": 130,
+              "medium": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+              "medium-width": 130,
+              "medium-height": 130,
+              "medium_large": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+              "medium_large-width": 130,
+              "medium_large-height": 130,
+              "large": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+              "large-width": 130,
+              "large-height": 130,
+              "1536x1536": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+              "1536x1536-width": 130,
+              "1536x1536-height": 130,
+              "2048x2048": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-strategy.png",
+              "2048x2048-width": 130,
+              "2048x2048-height": 130
+            }
+          },
+          "title": "The Strategy",
+          "description": "<p>I implemented Vue.js components for maintainability, WordPress as a headless CMS for dynamic content, and Nuxt.js for server-side rendering, deploying everything on Netlify with Git-based automation to create a scalable static site with authentic 90s aesthetics.</p>\n"
+        },
+        {
+          "image": {
+            "ID": 72,
+            "id": 72,
+            "title": "icon-results",
+            "filename": "icon-results.png",
+            "filesize": 26123,
+            "url": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-results.png",
+            "link": "http://rest-api-backend.local/project/wisnet96/icon-results/",
+            "alt": "",
+            "author": "1",
+            "description": "",
+            "caption": "",
+            "name": "icon-results",
+            "status": "inherit",
+            "uploaded_to": 68,
+            "date": "2025-05-27 10:52:56",
+            "modified": "2025-05-27 10:52:56",
+            "menu_order": 0,
+            "mime_type": "image/png",
+            "type": "image",
+            "subtype": "png",
+            "icon": "http://rest-api-backend.local/wp-includes/images/media/default.png",
+            "width": 130,
+            "height": 130,
+            "sizes": {
+              "thumbnail": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-results.png",
+              "thumbnail-width": 130,
+              "thumbnail-height": 130,
+              "medium": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-results.png",
+              "medium-width": 130,
+              "medium-height": 130,
+              "medium_large": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-results.png",
+              "medium_large-width": 130,
+              "medium_large-height": 130,
+              "large": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-results.png",
+              "large-width": 130,
+              "large-height": 130,
+              "1536x1536": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-results.png",
+              "1536x1536-width": 130,
+              "1536x1536-height": 130,
+              "2048x2048": "http://rest-api-backend.local/wp-content/uploads/2025/05/icon-results.png",
+              "2048x2048-width": 130,
+              "2048x2048-height": 130
+            }
+          },
+          "title": "The Result",
+          "description": "<p>What was scheduled as a 4-hour project became a personal passion spanning several additional hours of my own time, delivering a fully functional Windows 95 desktop interface that established team proficiency with modern JavaScript frameworks for future client work.</p>\n"
+        }
+      ],
+      "link": {
+        "title": "Wayback Machine Article",
+        "url": "https://web.archive.org/web/20210926084153/https://www.wisnet.com/rebuilding-a-throwback-96-website-with-modern-web-technologies/",
+        "target": "_blank"
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/projects/68",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/projects"
+        }
+      ],
+      "about": [
+        {
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/types/project"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/media/21"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "http://rest-api-backend.local/wp-json/wp/v2/media?parent=68"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
