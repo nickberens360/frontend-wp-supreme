@@ -3,12 +3,24 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   modules: [
+    '@nuxt/fonts',
     'vuetify-nuxt-module',
     '@nuxt/image',
     '@nuxtjs/eslint-module'
   ],
+  fonts: {
+    families: [
+      {
+        name: 'IBM Plex Sans',
+        provider: 'google',
+        weights: [300, 400, 500, 600, 700], // Only include weights you'll use
+        styles: ['normal', 'italic']
+      }
+    ]
+  },
   css: [
     './assets/css/globals.scss',
+    './assets/css/main.scss',
     '@mdi/font/css/materialdesignicons.css'
   ],
   vuetify: {

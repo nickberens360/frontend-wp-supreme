@@ -21,7 +21,7 @@
             v-if="bannerLabel"
             class="mb-8 text-uppercase">{{bannerLabel}}</p>
           <h1
-            class="text-h3 font-weight-bold"
+            class="text-h3"
             v-if="bannerHeading"
           >{{ bannerHeading }}</h1>
           <p
