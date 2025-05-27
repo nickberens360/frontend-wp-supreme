@@ -22,7 +22,7 @@
         />
       </div>
       <div class="skills-circle__title">
-        {{ circle.title }}
+        {{ circle.skill }}
       </div>
     </div>
   </div>
@@ -33,18 +33,18 @@
   centerText?: string
   activeIndex?: number
   circles?: Array<{
-    title: string
-    icon: string
-    location: 'top' | 'right' | 'bottom' | 'left'
+    skill?: string
+    icon?: string
+    location?: string
   }>
 }>(), {
   centerText: 'NB',
   activeIndex: 0,
   circles: () => [
-    { title: 'Vue.js', icon: 'mdi-vuejs', location: 'top' },
-    { title: 'WordPress', icon: 'mdi-wordpress', location: 'right' },
-    { title: 'Node.js', icon: 'mdi-nodejs', location: 'bottom' },
-    { title: 'TypeScript', icon: 'mdi-language-typescript', location: 'left' }
+    { skill: 'Vue.js', icon: 'mdi-vuejs', location: 'top' },
+    { skill: 'WordPress', icon: 'mdi-wordpress', location: 'right' },
+    { skill: 'Node.js', icon: 'mdi-nodejs', location: 'bottom' },
+    { skill: 'TypeScript', icon: 'mdi-language-typescript', location: 'left' }
   ]
 })
 

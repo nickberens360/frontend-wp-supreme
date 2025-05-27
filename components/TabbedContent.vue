@@ -6,7 +6,7 @@
       <v-col>
         <SkillsCircle
           centerText="NB"
-          :circles="skillCircles"
+          :circles="tabData.skill_circles"
           :activeIndex="tab"
           @circle-click="handleCircleClick"
         />
@@ -19,17 +19,17 @@
           class="mb-8"
         >
           <v-tab
-            v-for="(circle, index) in skillCircles"
+            v-for="(circle, index) in tabData.skill_circles"
             :key="index"
             :value="index"
           >
-            {{ circle.title }}
+            {{ circle.skill }}
           </v-tab>
         </v-tabs>
 
         <v-tabs-window v-model="tab">
           <v-tabs-window-item
-            v-for="(circle, index) in skillCircles"
+            v-for="(circle, index) in tabData.skill_circles"
             :key="index"
             :value="index"
           >
@@ -46,12 +46,14 @@
 <script setup lang="ts">
 const tab = ref(0);
 defineProps<{
-  skillCircles: Array<{
-    title: string;
-    icon: string;
-    location: 'top' | 'right' | 'bottom' | 'left';
-    tab_content: string;
-  }>;
+  tabData?: {
+    skill_circles?: Array<{
+      skill?: string;
+      icon?: string;
+      location?: string;
+      tab_content?: string;
+    }>;
+  };
 }>();
 
 function handleCircleClick(index: number) {
